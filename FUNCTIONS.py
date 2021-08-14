@@ -23,6 +23,16 @@ class Trade:
         return(ticker)
 
 
+
+
+
+def getDate(x):
+    ws = wb.worksheets[0]
+    date = ws.cell(row=x, column=1).value
+    print(date)
+    return (date)
+
+
 def getTicker2(x):                          ##getTickerName.. x=row parametr x, column=Market , BTCBUSD
         ws = wb.worksheets[0]
         ticker = ws.cell(row=x, column=2).value
@@ -58,10 +68,12 @@ x=4
 
 
 def getAllInfo(x):
+    getDate(x)
     getTicker2(x)
     getTypeoftrade(x)
     getPrice(x)
     getAmount(x)
     getTotalpaid(x)
+
 
 getAllInfo(3)
