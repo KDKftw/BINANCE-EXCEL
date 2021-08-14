@@ -1,12 +1,7 @@
-import pandas as pd
-import time
-import openpyxl
-from selenium import webdriver
 from openpyxl import load_workbook, cell
 
 pathTradeExport = r"C:\Users\KDK\Desktop\FOR testing binc.xlsx"
 ticker = "dot"
-df = pd.read_excel(pathTradeExport)
 wb = load_workbook(pathTradeExport)
 
 

@@ -1,8 +1,3 @@
-import pandas as pd
-import time
-import openpyxl
-from selenium import webdriver
-from openpyxl import load_workbook, cell
 from FUNCTIONS import *
 
 pathTradeExport = r"C:\Users\KDK\Desktop\FOR testing binc.xlsx"
