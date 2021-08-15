@@ -1,3 +1,4 @@
+from SetupFunctions import *
 from openpyxl import load_workbook
 
 pathTradeExport = r"C:\Users\KDK\Desktop\FOR testing binc2.xlsx"
@@ -11,7 +12,6 @@ def createSheetsTickers():
     x=2
     while numeroOfRows > 1:
       tickerName = ws.cell(row=x, column=2).value
-      ##print(tickerName)
       if tickerName in (wb.sheetnames):
           pass
       else:
@@ -20,4 +20,24 @@ def createSheetsTickers():
       numeroOfRows = numeroOfRows-1
       wb.save(pathTradeExport2)
 
-createSheetsTickers()
+##createSheetsTickers()
+
+
+def copyValuesToSheets():
+    ws = wb.worksheets[0]
+    numeroOfRows = ws.max_row
+    print(numeroOfRows)
+    x = 2
+    while numeroOfRows > 1:
+        sheetPosition = wb.worksheets.index(wb[getTicker(x)])
+        ws = wb.worksheets[sheetPosition]
+        ws.cell(row=x, column=1).value = getDate(x)
+
+        x = x + 1
+        numeroOfRows = numeroOfRows - 1
+        wb.save(pathTradeExport)
+    wb.save(pathTradeExport)
+
+copyValuesToSheets()
+
+

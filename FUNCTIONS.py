@@ -1,37 +1,21 @@
-from openpyxl import load_workbook, cell
+from openpyxl import load_workbook
 
 pathTradeExport = r"C:\Users\KDK\Desktop\FOR testing binc.xlsx"
-ticker = "dot"
+pathTradeExport2 = r"C:\Users\KDK\Desktop\12.6 - 1.8 2021 ALL TRADES2.xlsx"
 wb = load_workbook(pathTradeExport)
 
 
-class Trade:
-    def __init__(self, ticker):
-        self.ticker = ticker()
-
-
-
-    def getTicker(self, x):
-        ws = wb.worksheets[0]
-        ticker = ws.cell(row=x, column=2).value
-        print(ticker)
-        return(ticker)
-
-
-
-
-
-def getDate(x):
+def getDate(x):         ##class v ktery se bude dedit ws = wb wrksheets ?
     ws = wb.worksheets[0]
     date = ws.cell(row=x, column=1).value
-    print(date)
+    ##print(date)
     return (date)
 
 
-def getTicker2(x):                          ##getTickerName.. x=row parametr x, column=Market , BTCBUSD
+def getTicker(x):                          ##getTickerName.. x=row parametr x, column=Market , BTCBUSD
         ws = wb.worksheets[0]
         ticker = ws.cell(row=x, column=2).value
-        print(ticker)
+        ##print(ticker)
         return(ticker)
 
 
@@ -64,11 +48,11 @@ x=4
 
 def getAllInfo(x):
     getDate(x)
-    getTicker2(x)
+    getTicker(x)
     getTypeoftrade(x)
     getPrice(x)
     getAmount(x)
     getTotalpaid(x)
 
 
-getAllInfo(3)
+getAllInfo(2)
