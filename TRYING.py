@@ -2,19 +2,9 @@ import openpyxl
 from openpyxl import load_workbook
 pathTradeExport2 = r"C:\Users\KDK\Desktop\FOR testing binc.xlsx"
 pathTradeExport = r"C:\Users\KDK\Desktop\FOR testing binc2.xlsx"
-def getDate(x):
-    wb = load_workbook(pathTradeExport)
-    ws = wb.worksheets[0]
-    date = ws.cell(row=x, column=1).value
-    ##print(date)
-    return (date)
+from FUNCTIONS import getPrice, getDate, getTypeoftrade, getTicker, getTotalpaid, getAmount
 
-def getTicker(x):  ##getTickerName.. x=row parametr x, column=Market , BTCBUSD
-        wb = load_workbook(pathTradeExport)
-        ws = wb.worksheets[0]
-        ticker = ws.cell(row=x, column=2).value
-        ##print(ticker)
-        return (ticker)
+
 
 
 def copyValuesToSheets():
@@ -24,9 +14,25 @@ def copyValuesToSheets():
         print(numeroOfRows)
         x = 2
         while numeroOfRows > 1:
-            sheetPosition = wb.worksheets.index(wb[getTicker(x)])
+            sheetPosition = wb.worksheets.index(wb[getTicker(x, pathTradeExport)])
             ws = wb.worksheets[sheetPosition]
-            ws.cell(row=x, column=1).value = getDate(x)
+            ws.cell(row=x, column=1).value = getDate(x, pathTradeExport)
+
+            sheetPosition = wb.worksheets.index(wb[getTicker(x, pathTradeExport)])
+            ws = wb.worksheets[sheetPosition]
+            ws.cell(row=x, column=3).value = getTypeoftrade(x, pathTradeExport)
+
+            sheetPosition = wb.worksheets.index(wb[getTicker(x, pathTradeExport)])
+            ws = wb.worksheets[sheetPosition]
+            ws.cell(row=x, column=4).value = getPrice(x, pathTradeExport)
+
+            sheetPosition = wb.worksheets.index(wb[getTicker(x, pathTradeExport)])
+            ws = wb.worksheets[sheetPosition]
+            ws.cell(row=x, column=5).value = getAmount(x, pathTradeExport)
+
+            sheetPosition = wb.worksheets.index(wb[getTicker(x, pathTradeExport)])
+            ws = wb.worksheets[sheetPosition]
+            ws.cell(row=x, column=6).value = getTotalpaid(x, pathTradeExport)
 
             x = x + 1
             numeroOfRows = numeroOfRows - 1
