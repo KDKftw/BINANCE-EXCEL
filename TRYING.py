@@ -1,7 +1,7 @@
 import openpyxl
 from openpyxl import load_workbook
 pathTradeExport2 = r"C:\Users\KDK\Desktop\FOR testing binc.xlsx"
-pathTradeExport = r"C:\Users\KDK\Desktop\FOR testing binc2.xlsx"
+pathTradeExport = r"C:\Users\KDK\Desktop\FOR testing binc3.xlsx"
 from FUNCTIONS import getPrice, getDate, getTypeoftrade, getTicker, getTotalpaid, getAmount
 
 
@@ -20,19 +20,19 @@ def copyValuesToSheets():
 
             sheetPosition = wb.worksheets.index(wb[getTicker(x, pathTradeExport)])
             ws = wb.worksheets[sheetPosition]
-            ws.cell(row=x, column=3).value = getTypeoftrade(x, pathTradeExport)
+            ws.cell(row=x, column=2).value = getTypeoftrade(x, pathTradeExport)
 
             sheetPosition = wb.worksheets.index(wb[getTicker(x, pathTradeExport)])
             ws = wb.worksheets[sheetPosition]
-            ws.cell(row=x, column=4).value = getPrice(x, pathTradeExport)
+            ws.cell(row=x, column=3).value = getPrice(x, pathTradeExport)
 
             sheetPosition = wb.worksheets.index(wb[getTicker(x, pathTradeExport)])
             ws = wb.worksheets[sheetPosition]
-            ws.cell(row=x, column=5).value = getAmount(x, pathTradeExport)
+            ws.cell(row=x, column=4).value = getAmount(x, pathTradeExport)
 
             sheetPosition = wb.worksheets.index(wb[getTicker(x, pathTradeExport)])
             ws = wb.worksheets[sheetPosition]
-            ws.cell(row=x, column=6).value = getTotalpaid(x, pathTradeExport)
+            ws.cell(row=x, column=5).value = getTotalpaid(x, pathTradeExport)
 
             x = x + 1
             numeroOfRows = numeroOfRows - 1

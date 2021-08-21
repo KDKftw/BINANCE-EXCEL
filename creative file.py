@@ -1,9 +1,9 @@
 from SetupFunctions import *
 from openpyxl import load_workbook
 
-pathTradeExport = r"C:\Users\KDK\Desktop\FOR testing binc2.xlsx"
+pathTradeExport = r"C:\Users\KDK\Desktop\FOR testing binc3.xlsx"
 pathTradeExport2 = r"C:\Users\KDK\Desktop\12.6 - 1.8 2021 ALL TRADES2.xlsx"
-wb = load_workbook(pathTradeExport2)
+wb = load_workbook(pathTradeExport)
 ws = wb.worksheets[0]
 
 ##starting everytime on row 2 based on bnc export
@@ -18,9 +18,9 @@ def createSheetsTickers():
           wb.create_sheet(tickerName)
       x = x+1
       numeroOfRows = numeroOfRows-1
-      wb.save(pathTradeExport2)
+      wb.save(pathTradeExport)
 
-##createSheetsTickers()
+createSheetsTickers()
 
 
 def copyValuesToSheets():
@@ -38,6 +38,6 @@ def copyValuesToSheets():
         wb.save(pathTradeExport)
     wb.save(pathTradeExport)
 
-copyValuesToSheets()
+##copyValuesToSheets()
 
 

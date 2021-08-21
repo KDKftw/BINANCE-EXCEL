@@ -1,7 +1,7 @@
 from openpyxl import load_workbook
 
 
-
+pathTradeExport = r"C:\Users\KDK\Desktop\FOR testing binc3.xlsx"
 
 def getDate(x, pathTradeExport):         ##class v ktery se bude dedit ws = wb wrksheets ?
     wb = load_workbook(pathTradeExport)
@@ -50,12 +50,13 @@ def getTotalpaid(x, pathTradeExport):                  #totalPaid
 x=4
 
 
-def getAllInfo(x):
-    getDate(x)
-    getTicker(x)
-    getTypeoftrade(x)
-    getPrice(x)
-    getAmount(x)
-    getTotalpaid(x)
+def getAllInfo(x, pathTradeExport):
+    getDate(x, pathTradeExport)
+    getTicker(x, pathTradeExport)
+    getTypeoftrade(x, pathTradeExport)
+    getPrice(x, pathTradeExport)
+    getAmount(x, pathTradeExport)
+    getTotalpaid(x, pathTradeExport)
 
+getAllInfo(x, pathTradeExport)
 
