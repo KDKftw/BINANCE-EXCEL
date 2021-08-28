@@ -1,8 +1,7 @@
 from openpyxl import load_workbook
-pathTradeExport = r"C:\Users\KDK\Desktop\FOR testing binc2.xlsx"
-wb = load_workbook(pathTradeExport)
 
-def deleteExtraRows(ws):
+def deleteExtraRows(ws, pathTradeExport):
+    wb = load_workbook(pathTradeExport)
     index_row = []
     # loop each row in column A
     for i in range(1, ws.max_row):
@@ -18,12 +17,18 @@ def deleteExtraRows(ws):
         index_row = list(map(lambda k: k - 1, index_row))
         wb.save(pathTradeExport)
 
-sheet_number = len(wb.worksheets)
-print(sheet_number)
-x=1 ##x is one cuz we want to start on the second sheet, since the first one is where all the data is
-while sheet_number >1:
-    ws = wb.worksheets[x]
-    deleteExtraRows(ws)
 
-    x=x+1
-    sheet_number = sheet_number-1
+ ##x is one cuz we want to start on the second sheet, since the first one is where all the data is
+def deleteInAllSheets(pathTradeExport):
+    x = 1
+    wb = load_workbook(pathTradeExport)
+    sheet_number = len(wb.worksheets)
+    print(sheet_number)
+    while sheet_number > 1:
+        ws = wb.worksheets[x]
+        deleteExtraRows(ws, pathTradeExport)
+
+        x=x+1
+        sheet_number = sheet_number-1
+        print(x)
+        wb.save(pathTradeExport)

@@ -1,7 +1,7 @@
 from openpyxl import load_workbook
 
 
-pathTradeExport = r"C:\Users\KDK\Desktop\FOR testing binc3.xlsx"
+pathTradeExport = r"C:\Users\KDK\Desktop\ALLINONE.xlsx"
 
 def getDate(x, pathTradeExport):         ##class v ktery se bude dedit ws = wb wrksheets ?
     wb = load_workbook(pathTradeExport)
@@ -23,14 +23,14 @@ def getTypeoftrade(x, pathTradeExport):                  #sell or buy
     wb = load_workbook(pathTradeExport)
     ws = wb.worksheets[0]
     Typeoftrade = ws.cell(row=x, column=3).value
-    print(Typeoftrade)
+    ##print(Typeoftrade)
     return (Typeoftrade)
 
 def getPrice(x, pathTradeExport):                  #price
     wb = load_workbook(pathTradeExport)
     ws = wb.worksheets[0]
     price = ws.cell(row=x, column=4).value
-    print(price)
+    ##print(price)
     return (price)
 
 
@@ -38,14 +38,14 @@ def getAmount(x,pathTradeExport):                  #amount
     wb = load_workbook(pathTradeExport)
     ws = wb.worksheets[0]
     amount = ws.cell(row=x, column=5).value
-    print(amount)
+    ##print(amount)
     return (amount)
 
 def getTotalpaid(x, pathTradeExport):                  #totalPaid
     wb = load_workbook(pathTradeExport)
     ws = wb.worksheets[0]
     total = ws.cell(row=x, column=6).value
-    print(total)
+    ##print(total)
     return (total)
 x=4
 

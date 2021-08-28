@@ -1,13 +1,13 @@
 import openpyxl
 from openpyxl import load_workbook
 pathTradeExport2 = r"C:\Users\KDK\Desktop\FOR testing binc.xlsx"
-pathTradeExport = r"C:\Users\KDK\Desktop\FOR testing binc3.xlsx"
+pathTradeExport = r"C:\Users\KDK\Desktop\ALLINONE.xlsx"
 from FUNCTIONS import getPrice, getDate, getTypeoftrade, getTicker, getTotalpaid, getAmount
 
 
 
 
-def copyValuesToSheets():
+def copyValuesToSheets(pathTradeExport):
         wb = load_workbook(pathTradeExport)
         ws = wb.worksheets[0]
         numeroOfRows = ws.max_row
@@ -39,5 +39,3 @@ def copyValuesToSheets():
             wb.save(pathTradeExport)
         wb.save(pathTradeExport)
 
-
-copyValuesToSheets()
