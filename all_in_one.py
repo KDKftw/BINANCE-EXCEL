@@ -9,3 +9,5 @@ createSheetsTickers(pathTradeExport)
 copyValuesToSheets(pathTradeExport)
 prepareTitlesAllSheets(pathTradeExport)
 deleteInAllSheets(pathTradeExport)
+
+##SEEMS LIKE IT COPIES ALL VALEUS TWICE
