@@ -47,7 +47,7 @@ def getTotalpaid(x, pathTradeExport):                  #totalPaid
     total = ws.cell(row=x, column=6).value
     ##print(total)
     return (total)
-x=4
+##x=4
 
 
 def getAllInfo(x, pathTradeExport):

@@ -32,3 +32,4 @@ def deleteInAllSheets(pathTradeExport):
         sheet_number = sheet_number-1
         print(x)
         wb.save(pathTradeExport)
+
