@@ -23,7 +23,8 @@ sellsPrices = []
 buysPrices = []
 sellsAmounts = []
 buysAmounts = []
-while numeroOfRows > 1:
+##while numeroOfRows > 1:
+while numeroOfRows > 2:
     Typeoftrade = ws.cell(row=x, column=2).value
     total = ws.cell(row=x, column=5).value
 
@@ -48,7 +49,7 @@ while numeroOfRows > 1:
         print(sellsAmounts)
         numeroOfRows = numeroOfRows - 1
         sellsAmount = sellsAmount+totalInt
-        print(sum(sellsAmounts))
+
         x=x+1
 
     if Typeoftrade == "BUY":
@@ -63,7 +64,7 @@ while numeroOfRows > 1:
         print(buysAmounts)
         numeroOfRows = numeroOfRows - 1
         buysAmount = buysAmount + totalInt
-        print(sum(buysAmounts))
+
         x=x+1
 
 
@@ -83,4 +84,9 @@ ws.cell(row=2, column=9).value = buysCount
 ws.cell(row=2, column=10).value = sellsAmount
 ws.cell(row=2, column=11).value = buysAmount
 
+ws.cell(row=12, column=8).value = "buysAmountSUM"
+ws.cell(row=13, column=8).value = buysAmountsSUM
+
+ws.cell(row=12, column=9).value = "sellsAmountsSUM"
+ws.cell(row=13, column=9).value = sellsAmountsSUM
 wb.save(pathTradeExport)
