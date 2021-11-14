@@ -2,7 +2,7 @@ import openpyxl
 from openpyxl import load_workbook
 pathTradeExport2 = r"C:\Users\KDK\Desktop\FOR testing binc.xlsx"
 pathTradeExport = r"C:\Users\KDK\Desktop\ALLINONE.xlsx"
-pathTradeExport = r"C:\Users\KDK\Desktop\EXCELY BINANCE ALL\1.9 - 14.11 2021 ALL TRADES.xlsx"
+pathTradeExport = r"C:\Users\KDK\Desktop\BINANCE_EXCEL_START-14.11.2021\excel_all2.xlsx"
 from FUNCTIONS import getPrice, getDate, getTypeoftrade, getTicker, getTotalpaid, getAmount
 
 def copyValuesToSheets(pathTradeExport):

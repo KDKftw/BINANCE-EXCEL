@@ -6,7 +6,7 @@ from openpyxl import load_workbook
 
 ##ws = wb.worksheets[2]
 ##"TICKER","B",
-pathTradeExport = r"C:\Users\KDK\Desktop\EXCELY BINANCE ALL\1.9 - 14.11 2021 ALL TRADES.xlsx"
+pathTradeExport = r"C:\Users\KDK\Desktop\BINANCE_EXCEL_START-14.11.2021\excel_all2.xlsx"
 
 def prepareTitles(ws, pathTradeExport):
     titles = ["A", "C", "D", "E", "F"]

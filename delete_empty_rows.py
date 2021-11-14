@@ -33,5 +33,5 @@ def deleteInAllSheets(pathTradeExport):
         print(x)
         wb.save(pathTradeExport)
 
-pathTradeExport = r"C:\Users\KDK\Desktop\EXCELY BINANCE ALL\1.9 - 14.11 2021 ALL TRADES.xlsx"
+pathTradeExport = r"C:\Users\KDK\Desktop\BINANCE_EXCEL_START-14.11.2021\excel_all2.xlsx"
 deleteInAllSheets(pathTradeExport)
