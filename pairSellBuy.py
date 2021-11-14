@@ -1,7 +1,7 @@
 from openpyxl import load_workbook
 from delete_empty_rows import deleteInAllSheets
 pathTradeExport = r"C:\Users\KDK\Desktop\pairSellBuy.xlsx"
-
+pathTradeExport = r"C:\Users\KDK\Desktop\EXCELY BINANCE ALL\1.9 - 14.11 2021 ALL TRADES.xlsx"
 x=2 ##STARTING ROW
 
 wb = load_workbook(pathTradeExport)

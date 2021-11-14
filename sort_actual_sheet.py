@@ -1,12 +1,13 @@
 from openpyxl import load_workbook
 import time
 pathTradeExport = r"C:\Users\KDK\Desktop\ALLINONE.xlsx"
+pathTradeExport = r"C:\Users\KDK\Desktop\EXCELY BINANCE ALL\1.9 - 14.11 2021 ALL TRADES.xlsx"
 ##pathTradeExport = r"C:\Users\KDK\Desktop\pairSellBuy.xlsx"
 ##this gets total sold and total bought which is cool but not what i wanted to do in the first place
 x=2 ##STARTING ROW
 
 wb = load_workbook(pathTradeExport)
-ws = wb.worksheets[6]
+ws = wb.worksheets[2]
 
 amount = ws.cell(row=x, column=4).value
 numeroOfRows = ws.max_row

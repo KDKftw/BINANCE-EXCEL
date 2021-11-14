@@ -48,7 +48,7 @@ def getTotalpaid(x, pathTradeExport):                  #totalPaid
     ##print(total)
     return (total)
 ##x=4
-
+x=2
 
 def getAllInfo(x, pathTradeExport):
     getDate(x, pathTradeExport)

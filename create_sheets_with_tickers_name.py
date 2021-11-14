@@ -1,8 +1,9 @@
 from SetupFunctions import *
 from openpyxl import load_workbook
 
-pathTradeExport = r"C:\Users\KDK\Desktop\ALLINONE.xlsx"
+pathTradeExport3 = r"C:\Users\KDK\Desktop\ALLINONE.xlsx"
 pathTradeExport2 = r"C:\Users\KDK\Desktop\12.6 - 1.8 2021 ALL TRADES2.xlsx"
+pathTradeExport = r"C:\Users\KDK\Desktop\EXCELY BINANCE ALL\1.9 - 14.11 2021 ALL TRADES.xlsx"
 wb = load_workbook(pathTradeExport)
 ws = wb.worksheets[0]
 
@@ -20,5 +21,5 @@ def createSheetsTickers(pathTradeExport):
       numeroOfRows = numeroOfRows-1
       wb.save(pathTradeExport)
 
-##createSheetsTickers()
+createSheetsTickers(pathTradeExport)
 
