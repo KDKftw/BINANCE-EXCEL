@@ -3,7 +3,7 @@ from openpyxl import load_workbook
 
 pathTradeExport3 = r"C:\Users\KDK\Desktop\ALLINONE.xlsx"
 pathTradeExport2 = r"C:\Users\KDK\Desktop\12.6 - 1.8 2021 ALL TRADES2.xlsx"
-pathTradeExport = r"C:\Users\KDK\Desktop\BINANCE_EXCEL_START-14.11.2021\excel_all2.xlsx"
+pathTradeExport = r"C:\Users\KDK\Desktop\14.11-17.11\14.11-17.11.xlsx"
 wb = load_workbook(pathTradeExport)
 ws = wb.worksheets[0]
 

@@ -1,7 +1,7 @@
 from openpyxl import load_workbook
 import time
-pathTradeExport = r"C:\Users\KDK\Desktop\ALLINONE.xlsx"
-pathTradeExport = r"C:\Users\KDK\Desktop\EXCELY BINANCE ALL\1.9 - 14.11 2021 ALL TRADES.xlsx"
+pathTradeExport1 = r"C:\Users\KDK\Desktop\ALLINONE.xlsx"
+pathTradeExport = r"C:\Users\KDK\Desktop\14.11-17.11\14.11-17.11.xlsx"
 ##pathTradeExport = r"C:\Users\KDK\Desktop\pairSellBuy.xlsx"
 ##this gets total sold and total bought which is cool but not what i wanted to do in the first place
 x=2 ##STARTING ROW
